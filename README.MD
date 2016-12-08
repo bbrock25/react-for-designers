@@ -35,12 +35,6 @@ Lets get started!
 # get the source code
 git clone https://github.com/bbrock25/react-for-designers.git
 
-# install your dependencies
-npm install
-
-# run the test suite
-npm test
-
 git checkout lesson-0
 ```
 
