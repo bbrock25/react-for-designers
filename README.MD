@@ -31,6 +31,10 @@ of these before. We're going to cover the following types in this first lesson:
 * undefined
 * null
 
+Crack open the file `tests/primitives-test.js` for a primer on primitives!
+
+Once you have that spec running green, continue onto functions below.
+
 ## Javascript Functions
 
 A function (without side effects), in its simplest form, is something that takes
