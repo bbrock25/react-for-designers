@@ -70,6 +70,41 @@ function addTwo (x) {
   return x + 2
 }
 ```
+
+A few more pointers on functions. A function consists of a few key components:
+* function name
+* function arguments
+* function body
+
+```javascript
+// in traditional javascrip (not es6) we have the following
+
+function adder (x, y, z) {
+  console.log('we are adding these three values: ', x, y, z)
+
+  return x + y + z
+}
+```
+* "adder" is the function name
+* x, y and z are the function arguments
+* everything between the curly braces is the function body
+
+```javascript
+// similarly in es6 using an arrow function
+
+const adder = (x, y, z) => {
+  console.log('we are adding these three values: ', x, y, z)
+
+  return x + y + z
+}
+```
+* "adder" is the function name
+* x, y and z are the function arguments
+* everything between the curly braces is the function body
+
+Now, run the spec 'functions' by calling `npm test -- functions` from the command
+line and work through the exercises there!
+
 ## Javascript Objects
 
 We've all seen objects before, they're denoted by the curly braces being
@@ -86,4 +121,12 @@ const foo = {
 foo.bar     // => 'baz'
 foo['bar']  // => 'baz'
 ```
+
+Now, run the spec 'objects' by calling `npm test -- objects` from the command
+line and work through the exercises there!
+
+## Putting it all together
+
+Now, run the spec 'final' by calling `npm test -- final` from the command
+line and lets finish out this chapter!
 
