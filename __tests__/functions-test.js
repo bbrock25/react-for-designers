@@ -3,121 +3,235 @@
  */
 
 context('Putting the fun in functions', () => {
-  describe('a simple function', () => {
-    it('returns a value', () => {
-      function gimmeTwo() {
-        // update this function so that it returns the value 2 in order to make
-        // these specs pass
-        return 1
-      }
+  /*
+   * for the sake of these exercises, we are going to be using es6 arrow
+   * functions rather than traditional javascript functions. I find that they
+   * are a bit easier to reason about when just getting started
+   */
 
-      expect(gimmeTwo()).toEqual(2)
-    })
-
-    it('accepts a value and returns a value', () => {
-      function addTwo(x) {
-        // update this function so that it returns the value of whatever we pass
-        // in added to 2.
-        return x
-      }
-
-      expect(addTwo(2)).toEqual(4)
-    })
-
-    it('can return a fuction from a fucntion', () => {
-      function quack () {
-        return 'quack'
-      }
-
-      function generateQuacker() {
-        return quack
-      }
-
-      const returnedFunction = generateQuacker()
-
-      // call the returned function in the expectation to get this to pass
-      expect().toEqual('quack')
-    })
-
-    /* this last expectation demonstrates an important point, that functions can
-     * be passed around without calling them. You will see this a LOT in react
-     * land when we are mapping over items and creating lists of results.
+  describe('just like algebra!', () => {
+    /*
+     * remember algebra, when you wrote functions that did math? I'd recon to
+     * bet you remember this guy:
+     *
+     * y = m*x + b
+     *
+     * we call that the point slope form of a line. Where m is the slope and b
+     * denotes where the line crosses the y-axis. So if we had a line with
+     * a slope of 2 and a y intercept of 3 our equation would look like the
+     * following:
+     *
+     * y = 2*x + 3
+     *
+     * once we have this, we can easily calculate the y-coodinate for any point
+     * x on this line by simply substituting x with a real number. So at x = 2,
+     * we find that
+     *
+     * y = 2*2 + 3 = 7
+     *
+     * you could say here that y "is a function of x". So, lets write it like
+     * that
+     *
+     * f(x) = 2*x + 3
+     *
+     * and using our new function:
+     *
+     * f(1) = 2*1 + 3 = 5
+     * f(2) = 2*2 + 3 = 7
+     * f(3) = 2*3 + 3 = 9
+     *
+     * forgive me for the algebra refresher, but this is EXACTLY the type of
+     * stuff we do all day in javascript. We write functions!
+     *
+     * They might be a bit intimidating at first, but really, they are just the
+     * same as the algebra that we were all doing back in school.
+     *
+     * Lets rewrite our function f in javascript. We have two options:
+     *
+     * function f(x) { return 2*x + 3 }
+     *
+     * const f = (x) => 2*x + 3
+     *
+     * and we can use this the exact same
+     *
+     * f(1) = 5
+     * f(2) = 7
+     * f(3) = 9
+     *
+     * EXERCISE:
+     * ===
+     * given that you have a line that has a slope of 3 and a y intercept of
+     * 2, write a funtion that computes y for any given x.
+     *
+     * hint: y = f(x) = 3*x + 2
+     *
+     * I'll get you started with the function, your job is to 'fix' it so that
+     * the tests will pass
      */
-    describe('arrays', () => {
-      context('indexing', () => {
-        it('has zero based indexing', () => {
-          const target = [1,2,3]
 
-          /* access the values in an array using the bracket notation the first
-           * entry in an array is always at the 0'th position so for the above
-           * array:
-           *
-           * target[0] is 1
-           * target[1] is 2
-           * target[2] is 3
-           */
+    const f = (x) => x + 2 // fix this line!
 
-          // fix these expectations
-          expect().toEqual(0)
-          expect().toEqual(1)
-          expect().toEqual(2)
-        })
+    it("at x = 1, y should equal 5", () => {
+      expect(f(1)).toEqual(5)
+    })
+
+    it("at x = 2, y should equal 8", () => {
+      expect(f(2)).toEqual(8)
+    })
+
+    it("at x = 3, y should equal 11", () => {
+      expect(f(3)).toEqual(11)
+    })
+  })
+
+  context('functions that work with strings', () => {
+    /*
+     * a neat thing about javascript is that its 'dynamically typed'. that means
+     * that we can pass whatever we want to functions, either a number, string,
+     * array, object or even nothing at all; its up to us as the programmer to
+     * handle the various cases.
+     *
+     * lets write a function that will take in a string and return a different
+     * string. Here's an example:
+     *
+     * const g = (s) => s + " " + s
+     *
+     * this function takes in a string and returns that same string repeated
+     * twice seperated by a space. so using this we'll get the following results
+     *
+     * g('babar') = 'babar babar'
+     * g('spartan') = 'spartan spartan'
+     * g('bear') = 'bear bear'
+     *
+     * EXERCISE:
+     * ===
+     * Lets write our own function formatName, that takes in a first and
+     * last name and returns them in reverse order seperated by a string.
+     *
+     * I've gotten you started here, but there is a bug in the function. Modify
+     * the function 'g' so that the corresponding tests pass.
+     */
+
+    const g = (first, last) => first + last // fix this line!
+
+    xit('bill brock becomes "brock, bill"', () => {
+      expect(g('bill', 'brock')).toEqual('brock, bill')
+    })
+
+    xit('randy brock becomes "brock, randy"', () => {
+      expect(g('randy', 'brock')).toEqual('brock, randy')
+    })
+
+    xit('richie brock becomes "brock, richie"', () => {
+      expect(g('richie', 'brock')).toEqual('brock, richie')
+    })
+  })
+
+  describe('functions that take a string but return a number', () => {
+    /*
+     * here we're going to do something a bit more creative. In javascript, you
+     * can tell the length of a string by calling the .length property on it. So
+     * consider the folowing string:
+     *
+     * "hello"
+     *
+     * if you wanted to know the length of that string, you would simply call:
+     *
+     * "hello".length // => 5
+     *
+     * similarly you can call .length on other strings like so
+     *
+     * "goodbye".length   // => 7
+     * "thriving".length  // => 8
+     *
+     * also, you can assign a sring to a variable and call .length on that
+     * variable:
+     *
+     * const someString = "hello"
+     *
+     * someString.length  // => 5
+     *
+     * EXERCISE:
+     * ===
+     * Do you think that you could write a function to return the length of a
+     * string? I'll get you started
+     */
+
+    const getStringLength = (s) => "_".length // fix this line!
+
+    xit('calculates the length of "hi"', () => {
+      expect(getStringLength('hi')).toEqual(2)
+    })
+    xit('calculates the length of "hello"', () => {
+      expect(getStringLength('hello')).toEqual(5)
+    })
+    xit('calculates the length of "javascript"', () => {
+      expect(getStringLength('javascript')).toEqual(10)
+    })
+
+  })
+
+  // EXTRA CREDIT
+  describe('working with functions and arrays', () => {
+    context('applying a function accross an array with map', () => {
+      /*
+       * remember the .length function on a string, well there are many similar
+       * functions that are available to different data types in javascript. one
+       * of the most commonly used ones in UI programming is a map.
+       *
+       * the map function lives on every array and can be called like so:
+       *
+       * [1, 2, 3].map(f)
+       *
+       * the big difference here is that map takes a function as an argument and
+       * applies that function to every element in that array, and returns a new
+       * array.
+       *
+       * so, say we had a function addOne that did nothing but add the value 1
+       * to a number:
+       *
+       * const addOne = (x) => x + 1
+       *
+       * if we applied addTen to an array using a map, it would return a new
+       * array, with every entry in that array having 10 added to it. So, here
+       * it is
+       *
+       * const addTen = (x) => x + 10
+       *
+       * [1, 2, 3].map(addTen)  // => [11, 12, 13]
+       *
+       * or if we assinged the array to a variable
+       *
+       * const targetArray = [1, 2, 3, 4, 5]
+       *
+       * targetArray.map(addTen) // => [10, 20, 30, 40, 50]
+       *
+       *
+       * EXERCISE:
+       * ===
+       * Write a function that will add an exclamation point to the end of a
+       * string.
+       */
+
+      const excliam = (s) => s + '?' // fix me!
+
+      const target = ['hi', 'bye', 'why']
+
+      // first we test that we've got our function right
+      xit('exclaim makes life a bit more dramatic', () => {
+        expect(excliam('hi')).toEqual('hi!')
       })
 
-      context('map', () => {
-        it('returns a copy of the array if we don\'t do any tranformations', () => {
-          const target = [1, 2, 3]
+      /*
+       * now, apply the exclaim function to the target using a map, as in the
+       * examples above
+       */
+      let result;
+      xit('a mapped exclaim makes all the entries a bit louder', () => {
+        // uncomment and finish this line to apply exclaim to target using a map
+        // result = ...
 
-          function returnMyselfPlusOne(x) {
-            return x + 1
-          }
-
-          /*
-           * map returns a new array that was caclulated from the previous array
-           *
-           * so, using the above target and the defined function:
-           * returnMyselfPlusOne, we can create a new array using the map
-           * fuction.
-           *
-           * target.map(returnMyselfPlusOne) will return [2, 3, 4]
-           *
-           * create a new function, myselfMinusOne that will return a new array,
-           * where we subtract 1 from each entry in the original array
-           */
-
-          function myselfMinusOne(x) {
-            // return ?
-          }
-
-
-          expect(target.map(myselfMinusOne)).toEqual([0, 1, 2])
-        })
-
-        it('can compute the lenght of a string', () => {
-          /*
-           * what if our target was an array of strings, could we create a
-           * function that
-           */
-          function getStringLength(s) {
-            // return ?
-          }
-          expect(getStringLength('hello')).toEqual(5)
-        })
-
-        it('can count the lenght of the strings in an array', () => {
-          /*
-           * given that previous example, can we apply that to a map and get the
-           * lengths of all the strings in an array added to a new arary?
-           */
-
-          function getStringLength(s) {
-            // return ?
-          }
-
-          const target = ['a', 'bb', 'ccc', 'dddd']
-
-          expect(target.map(getStringLength)).toEqual([1, 2, 3, 4])
-        })
+        expect(result).toEqual(['hi!', 'bye!', 'why!'])
       })
     })
   })
