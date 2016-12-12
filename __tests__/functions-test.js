@@ -168,10 +168,8 @@ context('Putting the fun in functions', () => {
     xit('calculates the length of "javascript"', () => {
       expect(getStringLength('javascript')).toEqual(10)
     })
-
   })
 
-  // EXTRA CREDIT
   describe('working with functions and arrays', () => {
     context('applying a function accross an array with map', () => {
       /*
@@ -190,7 +188,7 @@ context('Putting the fun in functions', () => {
        * so, say we had a function addOne that did nothing but add the value 1
        * to a number:
        *
-       * const addOne = (x) => x + 1
+       * const addTen = (x) => x + 1
        *
        * if we applied addTen to an array using a map, it would return a new
        * array, with every entry in that array having 10 added to it. So, here
@@ -200,12 +198,11 @@ context('Putting the fun in functions', () => {
        *
        * [1, 2, 3].map(addTen)  // => [11, 12, 13]
        *
-       * or if we assinged the array to a variable
+       * and again:
        *
        * const targetArray = [1, 2, 3, 4, 5]
        *
        * targetArray.map(addTen) // => [10, 20, 30, 40, 50]
-       *
        *
        * EXERCISE:
        * ===
@@ -213,7 +210,7 @@ context('Putting the fun in functions', () => {
        * string.
        */
 
-      const excliam = (s) => s + '?' // fix me!
+      const excliam = (s) => s + '?' // fix this line!
 
       const target = ['hi', 'bye', 'why']
 
@@ -226,13 +223,72 @@ context('Putting the fun in functions', () => {
        * now, apply the exclaim function to the target using a map, as in the
        * examples above
        */
-      let result;
       xit('a mapped exclaim makes all the entries a bit louder', () => {
-        // uncomment and finish this line to apply exclaim to target using a map
-        // result = ...
-
-        expect(result).toEqual(['hi!', 'bye!', 'why!'])
+        expect(target.map(exclaim)).toEqual(['hi!', 'bye!', 'why!'])
       })
     })
   })
+
+  describe('multi-line functions', () => {
+    /*
+     * the function syntax that we have been using up until now is called and
+     * es6 arrow function with an 'implicit' return. what that means is that the
+     * function returns the expression that is immediately after the 'arrow'
+     *
+     * const f = () => 'hi'
+     * const g = (name) => 'hello ' + name
+     *
+     * both of the functions above, while readable, are somewhat limited in
+     * their extensibility. if we wanted to include any logic in that function,
+     * or say, interact with another api, or do anything that required more than
+     * one line of text, it would be difficult to accomplish in the 'implicit'
+     * form.
+     *
+     * for these situations, javascript has what is called a function body,
+     * denoted by curly braces '{' and '}' allong with a return statement.
+     *
+     * The two example functions can be rewritten using a function body and
+     * 'explicit' returns as so:
+     *
+     * const f = () => {
+     *   return 'hi'
+     * }
+     *
+     * const g = (name) => {
+     *   return 'hello ' + name
+     * }
+     *
+     * while this form is slightly more verbose, it affords us a bit more of a
+     * room for performing our calculations.
+     *
+     * EXERCISE:
+     * ===
+     * update the folloiwng function to return the following string for any
+     * given word.
+     *
+     * "the length of 'INPUT_STRING' is LENTGH characters."
+     */
+
+    const h = (input) => {
+      const length = input.length
+      // fix this function body to make the following specs pass
+      return ""
+    }
+
+    it('handles "bill" correctly', () => {
+      expect(h('bill')).toEqual("the lenght of 'bill' is 4 characters.")
+    })
+
+    it('handles "robert" correctly', () => {
+      expect(h('robert')).toEqual("the lenght of 'robert' is 6 characters.")
+    })
+
+    it('handles "" correctly', () => {
+      expect(h('')).toEqual("the lenght of '' is 0 characters.")
+    })
+  })
+
+  /*
+   * That's it for now with functions, great work!
+   */
 })
