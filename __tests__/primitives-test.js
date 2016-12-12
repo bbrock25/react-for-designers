@@ -24,7 +24,6 @@
    * we are expecting and run the test again. Once that test is passing, move
    * onto the next failure in this file.
    *
-   *
    * We'll be starting simple with our tests and using primarily the following
    * functions for assertions:
    *
@@ -34,7 +33,7 @@
    * toBeFalsy: https://facebook.github.io/jest/docs/api.html#tobefalsy
    *
    * Last bit, tests marked with `xit` are pending and will not be run by jest.
-   * When you work these next tests, update the `it` to be just `it` in order
+   * When you work these next tests, update the `xit` to be just `it` in order
    * to run the test block. For this spec to be completed, all tests must be
    * passing with 0 pending tests remaining.
    *
@@ -48,13 +47,13 @@ describe('JavaScript Primitives', () => {
   describe('booleans', () => {
     context('when evaluating for true', () => {
       xit('true is true', () => {
-        const value = false
+        const value = false // fix me!
 
         expect(value).toEqual(true)
       })
 
       xit('calculated true is true', () => {
-        const sevenEqualsFourPlusThree = 7 === (4 + 4)
+        const sevenEqualsFourPlusThree = 7 === (4 + 4) // fix me!
 
         expect(sevenEqualsFourPlusThree).toEqual(true)
       })
@@ -62,13 +61,13 @@ describe('JavaScript Primitives', () => {
 
     context('when evaluating for false', () => {
       xit('false is false', () => {
-        const value = true
+        const value = true // fix me!
 
         expect(value).toEqual(false)
       })
 
       xit('calculated false is false', () => {
-        const sevenDoesNotEqualFourPlusFour = (7 === (4 + 3))
+        const sevenDoesNotEqualFourPlusFour = (7 === (4 + 3)) // fix me!
 
         expect(sevenDoesNotEqualFourPlusFour).toBe(false)
       })
@@ -121,7 +120,7 @@ describe('JavaScript Primitives', () => {
   describe('numbers', () => {
     context('setting a number to a variable', () => {
       xit('has the number 7 assigned to the variable seven', () => {
-        const seven = 8
+        const seven = 8 // fix me!
 
         expect(seven).toEqual(7)
       })
