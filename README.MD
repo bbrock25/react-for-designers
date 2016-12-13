@@ -114,12 +114,22 @@ assigned to a variable like so:
 const foo = {
   bar: 'baz'
 }
+```
 
-// where we can access the properties within the object using either dot
-// notation or by a indexing into the obejct with a string
+We can access the properties within the object using either dot notation or by a
+indexing into the object with a string
 
-foo.bar     // => 'baz'
-foo['bar']  // => 'baz'
+```javascript
+foo.bar          // => 'baz'
+foo['bar']       // => 'baz'
+```
+
+What if we try to access attributes that don't exist on that object? Not much,
+they just come back as undefined.
+
+```javascript
+foo.whatever     // => undefined
+foo['whatever']  // => undefined
 ```
 
 Now, run the spec 'objects' by calling `npm test -- objects` from the command
