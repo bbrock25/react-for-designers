@@ -1,0 +1,21 @@
+{
+  "extends": "airbnb",
+  "rules": {
+    "semi": "never"
+  },
+  "globals": {
+    "jest": true,
+    "expect": true,
+    "mockFn": true,
+    "config": true,
+    "afterEach": true,
+    "beforeEach": true,
+    "describe": true,
+    "context": true,
+    "it": true,
+    "pit": true,
+    "require": true,
+    "xdescribe": true,
+    "xit": true
+  }
+}

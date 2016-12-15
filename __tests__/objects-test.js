@@ -4,7 +4,7 @@
 
 context('you have to look at this objectively', () => {
   /*
-   * JavaScript Objects are at their simplest, key value stores. You define an
+   * JavaScript Objects are, at their simplest, key value stores. You define an
    * object like so
    *
    * const store = {}
@@ -89,13 +89,13 @@ context('you have to look at this objectively', () => {
     })
   })
 
-  context('modules', () => {
+  context('objects as libraries', () => {
     /*
      * We do a lot of importing and exporting in es6, this allows us to contain
      * a collections of business logic into certain files, or logical groupings.
      *
      * Lets create an object that contains a few related functions that could
-     * someday be used as a module. We'll call this classCalculator. The class
+     * someday be used as a module. We'll call this ClassCalculator. The class
      * calculator should contain a few functions that take in a class object and
      * return some caluclated values related to that class. I'll define the
      * class for you and you can fill in the methods so that they pass
@@ -108,14 +108,13 @@ context('you have to look at this objectively', () => {
       { name: 'shanda', gpa: 4.0, sex: 'female'},
     ]
 
-
-    const classCalculator = {
+    const ClassCalculator = {
       studentCount: (students) => {
         // update this function to return the count of students passed in
         // remember, students are an array, isn't there something that can
         // quickly tell us the length of an array?
         // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length
-        return 0;
+        return undefined
       },
 
       averageGPA: (students) => {
@@ -135,19 +134,20 @@ context('you have to look at this objectively', () => {
       highestGpa: (students) => {
         // fill in the body here to return the highest gpa from the students
         // that are passed in. good luck!
+        return undefined
       }
     }
 
     it('calcuates the student count correctly', () => {
-      expect(classCalculator.studentCount(students)).toEqual(3)
+      expect(ClassCalculator.studentCount(students)).toEqual(3)
     })
 
     it('calculates the average GPA correctly', () => {
-      expect(classCalculator.averageGPA(students)).toEqual(3)
+      expect(ClassCalculator.averageGPA(students)).toEqual(3)
     })
 
     it('returns the correct highest GPA', () => {
-      expect(classCalculator.highestGpa(students)).toEqual(4)
+      expect(ClassCalculator.highestGpa(students)).toEqual(4)
     })
   })
 })

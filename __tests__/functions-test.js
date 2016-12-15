@@ -210,13 +210,13 @@ context('Putting the fun in functions', () => {
        * string.
        */
 
-      const excliam = (s) => s + '?' // fix this line!
+      const exclaim = (s) => s + '?' // fix this line!
 
       const target = ['hi', 'bye', 'why']
 
       // first we test that we've got our function right
       xit('exclaim makes life a bit more dramatic', () => {
-        expect(excliam('hi')).toEqual('hi!')
+        expect(exclaim('hi')).toEqual('hi!')
       })
 
       /*
@@ -276,15 +276,15 @@ context('Putting the fun in functions', () => {
     }
 
     it('handles "bill" correctly', () => {
-      expect(h('bill')).toEqual("the lenght of 'bill' is 4 characters.")
+      expect(h('bill')).toEqual("the length of 'bill' is 4 characters.")
     })
 
     it('handles "robert" correctly', () => {
-      expect(h('robert')).toEqual("the lenght of 'robert' is 6 characters.")
+      expect(h('robert')).toEqual("the length of 'robert' is 6 characters.")
     })
 
     it('handles "" correctly', () => {
-      expect(h('')).toEqual("the lenght of '' is 0 characters.")
+      expect(h('')).toEqual("the length of '' is 0 characters.")
     })
   })
 

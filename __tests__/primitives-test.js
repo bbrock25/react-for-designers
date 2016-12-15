@@ -146,50 +146,36 @@ describe('JavaScript Primitives', () => {
   describe('strings', () => {
     context('length', () => {
       xit('has a length of 0 when a string is empty', () => {
-        // update the variable 'length' to be the 'length' property on
-        // sillyString
         const sillyString = ''
-        const stringLen = 9999
 
-        expect(sillyString.length).toEqual(0)
+        // create a variable here that contains the length of sillyString
+        // const stringLen = ______
+
+        expect(stringLen).toEqual(0)
       })
 
       xit('has a length of 3 with a string "abc"', () => {
         // update the variable 'length' to be the 'length' property on
         // sillyString
         const sillyString = 'abc'
-        const stringLen = 9999
 
-        expect(sillyString.length).toEqual(3)
+        // create a variable here that contains the length of sillyString
+        // const stringLen = ______
+
+        expect(stringLen).toEqual(3)
       })
 
       context('truthy & falsey', () => {
         xit('non-empty strings evaluate to be truthy', () => {
           const nonEmptyString = 'asdf'
-          let value
-
-          if (nonEmptyString) {
-            value = true
-          } else {
-            value = false
-          }
 
           expect(nonEmptyString).toBeTruthy()
-          expect(value).toEqual(true)
         })
 
         xit('empty strings evaluate to be falsey', () => {
           const emptyString = ''
-          let value
-
-          if (emptyString) {
-            value = true
-          } else {
-            value = false
-          }
 
           expect(emptyString).toBeFalsy()
-          expect(value).toBe(false)
         })
       })
     })
