@@ -100,9 +100,9 @@ context('you have to look at this objectively', () => {
      */
 
     const students = [
-      { name: 'bill', gpa: 2.0, sex: 'male'},
-      { name: 'sally', gpa: 3.0, sex: 'female'},
-      { name: 'shanda', gpa: 4.0, sex: 'female'},
+      { name: 'bill', gpa: 2.0, sex: 'male' },
+      { name: 'sally', gpa: 3.0, sex: 'female' },
+      { name: 'shanda', gpa: 4.0, sex: 'female' }
     ]
 
     const ClassCalculator = {
@@ -118,7 +118,7 @@ context('you have to look at this objectively', () => {
       },
 
       averageGPA: (students) => {
-        let totalGpa = 0;
+        let totalGpa = 0
         /*
          * we're looping over students here using the forEach method on array:
          * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach

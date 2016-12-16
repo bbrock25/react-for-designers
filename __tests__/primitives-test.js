@@ -57,7 +57,8 @@ describe('JavaScript Primitives', () => {
       })
 
       xit('calculated true is true', () => {
-        const sevenEqualsFourPlusThree = 7 === (4 + 4) // fix me!
+        const seven = 7
+        const sevenEqualsFourPlusThree = seven === (4 + 4) // fix me!
 
         expect(sevenEqualsFourPlusThree).toEqual(true)
       })
@@ -71,7 +72,8 @@ describe('JavaScript Primitives', () => {
       })
 
       xit('calculated false is false', () => {
-        const sevenDoesNotEqualFourPlusFour = (7 === (4 + 3)) // fix me!
+        const seven = 7
+        const sevenDoesNotEqualFourPlusFour = (seven === (4 + 3)) // fix me!
 
         expect(sevenDoesNotEqualFourPlusFour).toBe(false)
       })
@@ -111,7 +113,7 @@ describe('JavaScript Primitives', () => {
 
         // arrays, even if they're empty
         expect([]).toBeTruthy()
-        expect([1,2,3]).toBeTruthy()
+        expect([1, 2, 3]).toBeTruthy()
 
         // objects, even if they're empty
         expect({}).toBeTruthy()
@@ -210,8 +212,7 @@ describe('JavaScript Primitives', () => {
       xit('has a length of 0 when a string is empty', () => {
         const sillyString = ''
 
-        // create a variable here that contains the length of sillyString
-        // const stringLen = ______
+        const stringLen = undefined // fix me
 
         expect(stringLen).toEqual(0)
       })
@@ -221,8 +222,7 @@ describe('JavaScript Primitives', () => {
         // sillyString
         const sillyString = 'abc'
 
-        // create a variable here that contains the length of sillyString
-        // const stringLen = ______
+        const stringLen = undefined // fix me
 
         expect(stringLen).toEqual(3)
       })

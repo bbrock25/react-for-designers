@@ -1,7 +1,6 @@
 /*
  * Functions: the bread and butter of javascript
  */
-
 context('Putting the fun in functions', () => {
   /*
    * for the sake of these exercises, we are going to be using es6 arrow
@@ -71,15 +70,15 @@ context('Putting the fun in functions', () => {
 
     const f = (x) => x + 2 // fix this line!
 
-    xit("at x = 1, y should equal 5", () => {
+    xit('at x = 1, y should equal 5', () => {
       expect(f(1)).toEqual(5)
     })
 
-    xit("at x = 2, y should equal 8", () => {
+    xit('at x = 2, y should equal 8', () => {
       expect(f(2)).toEqual(8)
     })
 
-    xit("at x = 3, y should equal 11", () => {
+    xit('at x = 3, y should equal 11', () => {
       expect(f(3)).toEqual(11)
     })
   })
@@ -157,7 +156,7 @@ context('Putting the fun in functions', () => {
      * string? I'll get you started
      */
 
-    const getStringLength = (s) => "_".length // fix this line!
+    const getStringLength = (s) => '_'.length // fix this line!
 
     xit('calculates the length of "hi"', () => {
       expect(getStringLength('hi')).toEqual(2)
@@ -270,9 +269,8 @@ context('Putting the fun in functions', () => {
      */
 
     const h = (input) => {
-      const length = input.length
       // fix this function body to make the following specs pass
-      return ""
+      return ''
     }
 
     xit('handles "bill" correctly', () => {
