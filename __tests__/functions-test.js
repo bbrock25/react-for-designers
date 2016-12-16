@@ -71,15 +71,15 @@ context('Putting the fun in functions', () => {
 
     const f = (x) => x + 2 // fix this line!
 
-    it("at x = 1, y should equal 5", () => {
+    xit("at x = 1, y should equal 5", () => {
       expect(f(1)).toEqual(5)
     })
 
-    it("at x = 2, y should equal 8", () => {
+    xit("at x = 2, y should equal 8", () => {
       expect(f(2)).toEqual(8)
     })
 
-    it("at x = 3, y should equal 11", () => {
+    xit("at x = 3, y should equal 11", () => {
       expect(f(3)).toEqual(11)
     })
   })
@@ -275,19 +275,18 @@ context('Putting the fun in functions', () => {
       return ""
     }
 
-    it('handles "bill" correctly', () => {
+    xit('handles "bill" correctly', () => {
       expect(h('bill')).toEqual("the length of 'bill' is 4 characters.")
     })
 
-    it('handles "robert" correctly', () => {
+    xit('handles "robert" correctly', () => {
       expect(h('robert')).toEqual("the length of 'robert' is 6 characters.")
     })
 
-    it('handles "" correctly', () => {
+    xit('handles "" correctly', () => {
       expect(h('')).toEqual("the length of '' is 0 characters.")
     })
   })
-
   /*
    * That's it for now with functions, great work!
    */

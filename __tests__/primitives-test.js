@@ -1,51 +1,51 @@
-  /*
-   * Testing Introduction:
-   *
-   * Here we will be using Jest as our test utility, you can find extensive
-   * documentation here: https://facebook.github.io/jest/
-   *
-   * There are a few imporant pieces that you will need to be familiar with.
-   * First off, you'll see us using these words quite frequently:
-   *  * context
-   *  * describe
-   *  * it
-   *  * xit
-   *
-   * context and describe are often used interchangeably, they provide textual
-   * descriptions of the tests within their region. For example, when testing
-   * the behavior for a Header react component, we might "describe" the test
-   * group as "Header Component" and then a related "context" could be the
-   * following  "Using the default Props:"
-   *
-   * run this test suite by running the following command:
-   *    'npm test -- primitives'
-   *
-   * Notice that when the test fails, you can see the description, context, and
-   * test dialogues. repair the test by setting variable seven to the value that
-   * we are expecting and run the test again. Once that test is passing, move
-   * onto the next failure in this file.
-   *
-   * We'll be starting simple with our tests and using primarily the following
-   * functions for assertions:
-   *
-   * expect: https://facebook.github.io/jest/docs/api.html#expectvalue
-   * toEqual: https://facebook.github.io/jest/docs/api.html#toequalvalue
-   * toBeTruthy: https://facebook.github.io/jest/docs/api.html#tobetruthy
-   * toBeFalsy: https://facebook.github.io/jest/docs/api.html#tobefalsy
-   *
-   * Last bit, tests marked with `xit` are pending and will not be run by jest.
-   * When you work these next tests, update the `xit` to be just `it` in order
-   * to run the test block. For this spec to be completed, all tests must be
-   * passing with 0 pending tests remaining.
-   *
-   * This exercise is to demonstrate some important properties of javascript
-   * primitives. Many of the tests are already passing, just update each spec
-   * to not be pending. For those that are not passing, look for a comment
-   * indicating where the bug might be.
-   *
-   * Please take care to study each of these examples as the lessons that
-   * follow will certainly build on what we learn here.
-   */
+/*
+* Testing Introduction:
+*
+* Here we will be using Jest as our test utility, you can find extensive
+* documentation here: https://facebook.github.io/jest/
+*
+* There are a few imporant pieces that you will need to be familiar with.
+* First off, you'll see us using these words quite frequently:
+*  * context
+*  * describe
+*  * it
+*  * xit
+*
+* context and describe are often used interchangeably, they provide textual
+* descriptions of the tests within their region. For example, when testing
+* the behavior for a Header react component, we might "describe" the test
+* group as "Header Component" and then a related "context" could be the
+* following  "Using the default Props:"
+*
+* run this test suite by running the following command:
+*    'npm test -- primitives'
+*
+* Notice that when the test fails, you can see the description, context, and
+* test dialogues. repair the test by setting variable seven to the value that
+* we are expecting and run the test again. Once that test is passing, move
+* onto the next failure in this file.
+*
+* We'll be starting simple with our tests and using primarily the following
+* functions for assertions:
+*
+* expect: https://facebook.github.io/jest/docs/api.html#expectvalue
+* toEqual: https://facebook.github.io/jest/docs/api.html#toequalvalue
+* toBeTruthy: https://facebook.github.io/jest/docs/api.html#tobetruthy
+* toBeFalsy: https://facebook.github.io/jest/docs/api.html#tobefalsy
+*
+* Last bit, tests marked with `xit` are pending and will not be run by jest.
+* When you work these next tests, update the `xit` to be just `it` in order
+* to run the test block. For this spec to be completed, all tests must be
+* passing with 0 pending tests remaining.
+*
+* This exercise is to demonstrate some important properties of javascript
+* primitives. Many of the tests are already passing, just update each spec
+* to not be pending. For those that are not passing, look for a comment
+* indicating where the bug might be.
+*
+* Please take care to study each of these examples as the lessons that
+* follow will certainly build on what we learn here.
+*/
 
 describe('JavaScript Primitives', () => {
   describe('booleans', () => {
@@ -167,7 +167,7 @@ describe('JavaScript Primitives', () => {
         expect(seven).toEqual(7)
       })
 
-      it('Math.floor will round down a number', () => {
+      xit('Math.floor will round down a number', () => {
         const eightAndChange = 8.17
 
         const floor = Math.floor(eightAndChange)
@@ -176,7 +176,7 @@ describe('JavaScript Primitives', () => {
         expect(floor).toEqual(expected)
       })
 
-      it('Math.ceil will round up a number', () => {
+      xit('Math.ceil will round up a number', () => {
         const eightAndChange = 8.17
 
         const ceil = Math.ceil(eightAndChange)
@@ -185,7 +185,7 @@ describe('JavaScript Primitives', () => {
         expect(ceil).toEqual(expected)
       })
 
-      it('the modulus operator "%" will return a remainder', () => {
+      xit('the modulus operator "%" will return a remainder', () => {
         const little = 3
         const big = 5
 
@@ -194,7 +194,7 @@ describe('JavaScript Primitives', () => {
         expect(big % little).toEqual(expected)
       })
 
-      it('the modulus operator "%" will return a what if a number is evenly divisible', () => {
+      xit('the modulus operator "%" will return a what if a number is evenly divisible', () => {
         const expected = undefined // fix me
 
         expect(4 % 2).toEqual(expected)
