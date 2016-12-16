@@ -158,7 +158,7 @@ context('Putting the fun in functions', () => {
 
     const getStringLength = (s) => '_'.length // fix this line!
 
-    xit('calculates the length of "hi"', () => {
+    it('calculates the length of "hi"', () => {
       expect(getStringLength('hi')).toEqual(2)
     })
     xit('calculates the length of "hello"', () => {

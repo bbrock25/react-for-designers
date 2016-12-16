@@ -65,7 +65,7 @@ context('you have to look at this objectively', () => {
       // fill me with goodies!
     }
 
-    xit('has a name', () => {
+    it('has a name', () => {
       expect(store.name).toEqual('the pilgrim grocery')
     })
 

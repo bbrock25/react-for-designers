@@ -3,7 +3,7 @@ import * as intro from '../intro'
 context('Welcome!', () => {
   // here is our first test, the fist bit here describes the test. jest (our
   // test runner) looks for these test blocks and runs them accordingly
-  xit('is a real gimme', () => {
+  it('is a real gimme', () => {
     // and our first expectation!
     // fix this by changing false to be true
     expect(false).toEqual(true)

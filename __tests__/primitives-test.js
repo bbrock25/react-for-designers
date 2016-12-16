@@ -50,7 +50,7 @@
 describe('JavaScript Primitives', () => {
   describe('booleans', () => {
     context('when evaluating for true', () => {
-      xit('true is true', () => {
+      it('true is true', () => {
         const value = false // fix me!
 
         expect(value).toEqual(true)
