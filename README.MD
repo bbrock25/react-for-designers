@@ -15,17 +15,40 @@ fundamentals each lesson.
 * `git`
 * `node v6.7.0` or greater
 
-## Workflow
+## Workflow and Test Driven Development
 
 Each lesson will begin by checking out the relevant branch, installing any new
 dependencies and then running the tests. Some lessons will involve running a
-development server and will have some visuals, others will not. Directions for
-each lesson will be in both the readme and the tests. Assume that if you have
-broken tests, that those will need to be repaired in order to complete that
-lesson.
+development server and will have  visuals, others will not. Directions for each
+lesson will be in both the readme and the tests.
+
+If you haven't written many tests before, the format here might come as a
+surprise. Test driven development works as follows:
+
+* a developer identifies a feature / requirement
+* the developer then writes a test representing that feature
+* the test is initially failing, since the feature hasn't been developed yet
+* the developer then determines the work that is required to implement that
+  feature and goes about writing the code that makes that test pass
+* once the test is passing, the code is in a good state to be 'refactored'. This
+  gives the developer the ability to clean or change the internals of the
+  implementation while maintaining the desired output.
+* Once the tests are passing, the feature can be considered complete.
+* Rinse, wash, repeat for additional features and functionality
+
+Now, there are many merits to this approach, and let's be honest, there are
+some things that are quite difficult to pin down in code, especially when it
+comes to presentation, however, this is a great starting point for base
+functionality.
+
+These exercises will often consist of initially pending or failing tests, and it
+will be your responsibility to get each exercise passing (all green with no
+pending tests). Later on, you might even want to experiment writing your own
+tests. Here we will be testing basic JavaScript logic and how that applies to
+react components.
 
 I really hope you enjoy this series. Feedback is always appreciated in the form
-of issues or a pull reuqest!
+of issues or a pull request. Lets get going!
 
 Lets get started!
 
@@ -35,6 +58,10 @@ Lets get started!
 # get the source code
 git clone https://github.com/bbrock25/react-for-designers.git
 
+# get into the directory
+cd react-for-designers
+
+# checkout the 0'th lesson
 git checkout lesson-0
 ```
 
