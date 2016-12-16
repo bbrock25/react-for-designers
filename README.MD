@@ -33,6 +33,10 @@ of these before. We're going to cover the following types in this first lesson:
 
 Crack open the file `tests/primitives-test.js` for a primer on primitives!
 
+```
+npm test -- primitives
+```
+
 Once you have that spec running green, continue onto functions below.
 
 ## Javascript Functions
@@ -133,10 +137,9 @@ foo['whatever']  // => undefined
 ```
 
 Now, run the spec 'objects' by calling `npm test -- objects` from the command
-line and work through the exercises there!
+line and work through the exercises there. This one gets a bit more challenging,
+so be patient, you should have everything you need.
 
-## Putting it all together
-
-Now, run the spec 'final' by calling `npm test -- final` from the command
-line and lets finish out this chapter!
+Once that spec is running green, run `npm test` and look at all that green.
+Doesn't that feel good?
 

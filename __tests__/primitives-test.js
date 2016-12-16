@@ -5,10 +5,11 @@
    * documentation here: https://facebook.github.io/jest/
    *
    * There are a few imporant pieces that you will need to be familiar with.
-   * First off, you'll see us using three words quite frequently:
+   * First off, you'll see us using these words quite frequently:
    *  * context
    *  * describe
    *  * it
+   *  * xit
    *
    * context and describe are often used interchangeably, they provide textual
    * descriptions of the tests within their region. For example, when testing
@@ -38,9 +39,12 @@
    * passing with 0 pending tests remaining.
    *
    * This exercise is to demonstrate some important properties of javascript
-   * primitives. Most of the tests are already passing, just update each spec
-   * to not be pending. Please pay attention though, you'll use the information
-   * learned here in subsequent exercises.
+   * primitives. Many of the tests are already passing, just update each spec
+   * to not be pending. For those that are not passing, look for a comment
+   * indicating where the bug might be.
+   *
+   * Please take care to study each of these examples as the lessons that
+   * follow will certainly build on what we learn here.
    */
 
 describe('JavaScript Primitives', () => {
@@ -75,6 +79,23 @@ describe('JavaScript Primitives', () => {
 
     context('the notion of truthy and falsey', () => {
       xit('is truthy for all things that are truthy', () => {
+        /* what does it mean for something to be truthy?
+         *
+         * it means that when evaulated as a boolean, it will evaluate true. For
+         * instance, say that the value X is truthy
+         *
+         * const X = 'something truthy'
+         *
+         * if (X) {
+         *  console.log('this will run')
+         * } else {
+         *  console.log('this will never run')
+         * }
+         *
+         * running the above code, we will see the first statment logged to the
+         * console. the following are examples that are evaluated as truthy
+         */
+
         // non-empty strings
         expect('asdf').toBeTruthy()
 
@@ -101,7 +122,24 @@ describe('JavaScript Primitives', () => {
       })
 
       xit('is falsey for all the things that are falsey', () => {
-        // empty strings are falsey
+        /* what does it mean for something to be falsy?
+         *
+         * it means that when evaulated as a boolean, it will evaluate true. For
+         * instance, say that the value Y is falsy
+         *
+         * const Y = 'something falsy'
+         *
+         * if (Y) {
+         *  console.log('this will never run')
+         * } else {
+         *  console.log('this will never run')
+         * }
+         *
+         * running the above code, we will see the second statment logged to the
+         * console. the following are examples that are evaluated as falsy
+         */
+
+        // empty strings
         expect('').toBeFalsy()
 
         // the number 0
@@ -119,26 +157,50 @@ describe('JavaScript Primitives', () => {
 
   describe('numbers', () => {
     context('setting a number to a variable', () => {
+      /*
+       * numbers are pretty straight forward, so lets look at a few math
+       * functions to make this more interesting
+       */
       xit('has the number 7 assigned to the variable seven', () => {
         const seven = 8 // fix me!
 
         expect(seven).toEqual(7)
       })
 
-      xit('is evaluates truthy when non-zero', () => {
-        expect(-1).toBeTruthy()
-        expect(-1.1).toBeTruthy()
-        expect(-100000).toBeTruthy()
+      it('Math.floor will round down a number', () => {
+        const eightAndChange = 8.17
 
-        expect(1).toBeTruthy()
-        expect(1.1).toBeTruthy()
-        expect(100000).toBeTruthy()
+        const floor = Math.floor(eightAndChange)
+        const expected = undefined // fix me
+
+        expect(floor).toEqual(expected)
       })
 
-      xit('is evaluates falsey for the number 0', () => {
-        const zero = 0
+      it('Math.ceil will round up a number', () => {
+        const eightAndChange = 8.17
 
-        expect(zero).toBeFalsy()
+        const ceil = Math.ceil(eightAndChange)
+        const expected = undefined // fix me
+
+        expect(ceil).toEqual(expected)
+      })
+
+      it('the modulus operator "%" will return a remainder', () => {
+        const little = 3
+        const big = 5
+
+        const expected = undefined // fix me
+
+        expect(big % little).toEqual(expected)
+      })
+
+      it('the modulus operator "%" will return a what if a number is evenly divisible', () => {
+        const expected = undefined // fix me
+
+        expect(4 % 2).toEqual(expected)
+        expect(6 % 2).toEqual(expected)
+        expect(8 % 2).toEqual(expected)
+        expect(expected % 2).toEqual(expected)
       })
     })
   })
@@ -164,20 +226,42 @@ describe('JavaScript Primitives', () => {
 
         expect(stringLen).toEqual(3)
       })
+    })
 
-      context('truthy & falsey', () => {
-        xit('non-empty strings evaluate to be truthy', () => {
-          const nonEmptyString = 'asdf'
+    context('string slice', () => {
+      /*
+       * take a look at the string slice method that can be used to return
+       * portions of a string:
+       *
+       * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+       */
+      const sample = 'this is the day'
 
-          expect(nonEmptyString).toBeTruthy()
-        })
+      xit('playing with substrings #1', () => {
+        const begin = 0 // fix me
+        const end = 0   // fix me
 
-        xit('empty strings evaluate to be falsey', () => {
-          const emptyString = ''
+        expect(sample.slice(begin, end)).toEqual('t')
+      })
 
-          expect(emptyString).toBeFalsy()
-        })
+      xit('playing with substrings #2', () => {
+        const begin = 0 // fix me
+        const end = 0   // fix me
+
+        expect(sample.slice(begin, end)).toEqual('this')
+      })
+
+      xit('playing with substrings #3', () => {
+        const begin = 0 // fix me
+        const end = 0   // fix me
+
+        expect(sample.slice(begin, end)).toEqual(' the ')
       })
     })
+
+    /* there are lots of other methods on any given string, take a look at the
+     * docs:
+     * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
+     */
   })
 })
