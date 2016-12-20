@@ -123,7 +123,7 @@ context('you have to look at this objectively', () => {
          * we're looping over students here using the forEach method on array:
          * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
          */
-        students.forEach(student => {
+        students.forEach((student) => {
           // add the student gpa to the total gpa
           // uncomment the next line to log each student
           // console.log(student)

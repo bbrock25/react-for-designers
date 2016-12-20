@@ -9,6 +9,8 @@ context('Welcome!', () => {
     expect(false).toEqual(true)
   })
 
+  // this next test is marked as pending using the xit function. in order to get
+  // this test to run, use the 'it' function, same as we did in the test above
   xit('the intro message should match what we are expecting', () => {
     // this expectation loads in a message from the import above and compares it
     // to something that we define. Fix this test by updating the
