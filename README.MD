@@ -9,6 +9,10 @@ First off, all of our React templating will actually be written in JavaScript
 files. A very basic React template will look something like this:
 
 ```javascript
+// SiteHeader.js
+
+import React from 'react'
+
 function SiteHeader () {
   return (
     <div>
@@ -52,6 +56,9 @@ Say we want to use the SiteHeader that we defined above in a basic Layout. Lets
 create a Layout for our home page.
 
 ```javascript
+// HomeLayout.js
+
+import React from 'react'
 import SiteHeader from 'components/SiteHeader'
 
 function HomeLayout () {
@@ -90,6 +97,10 @@ UserProfileCard that we would often see in a list view on LinkedIn or some other
 Socially leaning site.
 
 ```javascript
+// BillsProfileCard.js
+
+import React from 'react'
+
 function BillsProfileCard () {
   return (
     <section>
@@ -107,6 +118,10 @@ get cool. Lets refactor BillsProfileCard to be a bit more reusable. Here we are
 creating a ProfileCard.
 
 ```javascript
+// ProfileCard.js
+
+import React from 'react'
+
 function ProfileCard (props) {
   return (
     <section>
@@ -127,6 +142,11 @@ Now, lets create a list where we are rendering both Bill and Jeff's profiles in
 the same view.
 
 ```javascript
+// SpartanEmployees.js
+
+import React from 'react'
+import ProfileCard from 'components/ProfileCard'
+
 function SpartanEmployees () {
   return (
     <section>
@@ -164,7 +184,12 @@ objects to pass into each component as props that define all the attributes for
 a given `ProfileCard`.
 
 ```javascript
-const billsProps = {
+// SpartanEmployees.js
+
+import React from 'react'
+import ProfileCard from 'components/ProfileCard'
+
+const billProps = {
   name: 'Bill',
   altText: 'super developer',
   imageSrc: 'http://placekitten.com/200/300',
@@ -210,7 +235,7 @@ here with JSX, but really you can translate the following statements to be
 equivalent
 
 ```javascript
-const billsProps = {
+const billProps = {
   name: 'Bill',
   altText: 'super developer',
   imageSrc: 'http://placekitten.com/200/300',
