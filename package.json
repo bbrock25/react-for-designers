@@ -13,6 +13,7 @@
   "repository": "https://github.com/bbrock25/react-for-designers",
   "devDependencies": {
     "@kadira/storybook": "^2.35.1",
+    "@kadira/storybook-addon-knobs": "^1.7.1",
     "babel-preset-es2015": "^6.18.0",
     "eslint": "^3.12.2",
     "eslint-config-standard": "^6.2.1",

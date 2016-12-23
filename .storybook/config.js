@@ -14,14 +14,12 @@ const CenterDecorator = (story) => (
     alignItems: "center",
     margin: "0 0",
     padding: "20",
-    height: "95vh",
-    border: "1px solid red"
+    height: "95vh"
   }}>
     {story()}
   </div>
 )
 
 addDecorator(CenterDecorator)
-
 
 configure(loadStories, module);
