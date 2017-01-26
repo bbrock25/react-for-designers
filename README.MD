@@ -56,12 +56,11 @@ Lets get started!
 
 ```bash
 # get the source code
-git clone https://github.com/bbrock25/react-for-designers.git
+git clone https://github.com/spartansystems/react-tutorials.git
 
 # get into the directory
-cd react-for-designers
+cd react-tutorials
 
 # checkout the 0'th lesson
 git checkout lesson-0
 ```
-
