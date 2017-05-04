@@ -1,7 +1,7 @@
 ## Project Roadmap
 
 ### Lesson 0: Introduction
-- Testing Basics,
+- Testing Basics
 - Primitives
 - Functions
 - Objects

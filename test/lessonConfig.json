@@ -1,0 +1,31 @@
+{
+  "bail": true,
+  "verbose": true,
+  "testRegex": "\\.spec\\.js$",
+  "testPathIgnorePatterns": [
+    "node_modules",
+    "blueprints"
+  ],
+  "moduleDirectories": [
+    "node_modules",
+    "src",
+    "lessons"
+  ],
+  "moduleFileExtensions": [
+    "js",
+    "jsx",
+    "ts",
+    "tsx",
+    "json",
+    "css",
+    "sss",
+    "scss",
+    "md",
+    "graphql"
+  ],
+  "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+    "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+  },
+  "setupTestFrameworkScriptFile": "<rootDir>/node_modules/jest-enzyme/lib/index.js"
+}

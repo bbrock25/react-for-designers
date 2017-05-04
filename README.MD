@@ -13,7 +13,8 @@ fundamentals each lesson.
 * Familiarity with HTML, CSS and a dash of JS
 * A command line
 * `git`
-* `node v6.7.0` or greater
+* `node v7.9.0` - [Manage Node versions with NVM](https://github.com/creationix/nvm)
+* `yarn v0.23.4` - [Install](https://yarnpkg.com/en/docs/install)
 
 ## Workflow and Test Driven Development
 
@@ -61,6 +62,5 @@ git clone https://github.com/spartansystems/react-tutorials.git
 # get into the directory
 cd react-tutorials
 
-# checkout the 0'th lesson
-git checkout lesson-0
+# Open an editor and navigate to `lessons/0 - Primitives`
 ```
